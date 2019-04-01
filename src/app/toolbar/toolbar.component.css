@@ -1,0 +1,14 @@
+.profile-img {
+  background-image: url('../../assets/profile_image.jpg');
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.toolbar-style {
+  font-size: medium;
+}
+
+
