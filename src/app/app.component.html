@@ -4,7 +4,8 @@
   <div *ngIf="isDesktopView; else mobileView">
     <mat-sidenav-container>
         <mat-sidenav mode="side" [opened]="true"  [fixedInViewport]="true" class="mat-sidenav-panel">
-            <app-toolbar></app-toolbar>
+            <app-toolbar [mode]="'DESKTOP'"></app-toolbar>
+
         </mat-sidenav>
       <mat-sidenav-content>
         <router-outlet></router-outlet>
@@ -14,7 +15,7 @@
 
   <ng-template #mobileView>
       <div class="navigator-panel">
-        <app-toolbar></app-toolbar>
+        <app-toolbar [mode]="'MOBILE'"></app-toolbar>
       </div>
     <router-outlet></router-outlet>
   </ng-template>

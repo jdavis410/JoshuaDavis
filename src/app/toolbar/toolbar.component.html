@@ -2,9 +2,20 @@
 <mat-toolbar class="toolbar-style">
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-around center">
     <mat-icon  svgIcon="jd-logo" aria-label="JD"></mat-icon>
-    <div routerLink="/home">Home</div>
-    <div routerLink="/resume">Resume</div>
-    <div routerLink="/projects">Projects</div>
-    <div routerLink="/photography">Photography</div>
+
+    <div *ngIf="mode == 'MOBILE'; else desktop">
+      <mat-chip-list>
+        <mat-chip class="chip-color" routerLink="/resume" aria-label="Resume"><mat-icon svgIcon="account-card-details-outline"></mat-icon></mat-chip>
+        <mat-chip class="chip-color" routerLink="/projects" aria-label="Projects"><mat-icon svgIcon="github-box"></mat-icon></mat-chip>
+        <mat-chip class="chip-color" routerLink="/photography" aria-label="Photography"><mat-icon svgIcon="camera"></mat-icon></mat-chip>
+      </mat-chip-list>
+    </div>
+    <ng-template #desktop>
+      <mat-chip-list>
+        <mat-chip class="chip-color" routerLink="/resume">Resume</mat-chip>
+        <mat-chip class="chip-color" routerLink="/projects">Projects</mat-chip>
+        <mat-chip class="chip-color" routerLink="/photography">Photography</mat-chip>
+      </mat-chip-list>
+    </ng-template>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,13 +1,17 @@
 .mat-sidenav-panel {
   width: 500px;
-  -webkit-box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
-  -moz-box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
-  box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
+  -webkit-box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
+  -moz-box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
+  box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
 }
 
 .navigator-panel {
-  -webkit-box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
-  -moz-box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
-  box-shadow: 10px 13px 37px 6px rgba(173,173,173,0.65);
+  -webkit-box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
+  -moz-box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
+  box-shadow: 2px 0px 8px -1px rgba(148,148,148,1);
 }
 
+.linkedin-logo {
+  width: 38px !important;
+  padding-left: 3%;
+}

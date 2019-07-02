@@ -13,7 +13,8 @@ import { DesktopResumeComponent} from './page-components/resume/resume.component
 import { PhotographyComponent } from './page-components/photography/photography.component';
 import { HomeComponent } from './page-components/home/home.component';
 
-
+import {MatIconRegistry, MatIconModule} from '@angular/material';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -36,4 +37,9 @@ import { HomeComponent } from './page-components/home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private  matIconRegistry: MatIconRegistry,
+              private  domSanitizer: DomSanitizer) {
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('../assets/mdi.svg'));
+  }
+}
